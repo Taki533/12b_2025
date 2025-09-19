@@ -10,7 +10,7 @@ namespace _12b_2025
     {
         static void Main(string[] args)
         {
-
+            Console.Write("ahaa");
         }
     }
 }
