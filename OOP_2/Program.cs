@@ -10,7 +10,12 @@ namespace OOP_2
     {
         static void Main(string[] args)
         {
-            
+            Farmer n = new Farmer();
+            n.nyulik();
+            n.meret = "56";
+            n.tipus = "Livájsz";
+            n.anyag = "farmer";
+            Console.WriteLine(n);
         }
     }
 }
