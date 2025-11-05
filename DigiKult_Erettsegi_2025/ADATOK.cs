@@ -10,13 +10,14 @@ namespace DigiKult_Erettsegi_2025
     {
         public int km;
         public string jelzes;
-        public ADATOK(string sor) 
+        public bool varosban;
+        public ADATOK(string sor)
         {
             string[] s = sor.Split(" ");
             km = int.Parse(s[0]);
             jelzes = s[1];
         }
-        public ADATOK(int ut , string jelzes) 
+        public ADATOK(int ut, string jelzes)
         {
             km = ut;
             this.jelzes = jelzes;
@@ -31,5 +32,52 @@ namespace DigiKult_Erettsegi_2025
             {
                 return false;
             }
+        }
+        public int sebessegHatar()
+        {
+            try
+            {
+                int sebesseg = int.Parse(this.jelzes);
+                return sebesseg;
+            }
+            catch
+            {
+                if (Telepulese())
+                {
+                    return 50;
+                }
+                else if (jelzes == "]")
+                {
+                    return 90;
+                }
+                else if (jelzes == "#")
+                {
+                    if (varosban)
+                    {
+                        return 50;
+                    }
+                    else
+                    {
+                        return 90;
+                    }
+
+                }
+                else if (jelzes == "%")
+                {
+                    if (varosban)
+                    {
+                        return 50;
+                    }
+                    else
+                    {
+                        return 90;
+                    }
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
     }
 }
