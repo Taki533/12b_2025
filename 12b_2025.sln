@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OO__5_gyak", "OO__5_gyak\OO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiKult_Erettsegi_2025", "DigiKult_Erettsegi_2025\DigiKult_Erettsegi_2025.csproj", "{8ED35155-622D-4343-B82D-877E4A1555C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jelado", "Jelado\Jelado.csproj", "{6FFE6C45-0A26-409E-A338-BBE9556963F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8ED35155-622D-4343-B82D-877E4A1555C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ED35155-622D-4343-B82D-877E4A1555C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ED35155-622D-4343-B82D-877E4A1555C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FFE6C45-0A26-409E-A338-BBE9556963F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FFE6C45-0A26-409E-A338-BBE9556963F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FFE6C45-0A26-409E-A338-BBE9556963F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FFE6C45-0A26-409E-A338-BBE9556963F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

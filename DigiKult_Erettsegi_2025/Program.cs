@@ -19,6 +19,8 @@
                 {
                     varosban = false;
                 }
+                adatLista[i-1].varosban = varosban;
+
             }
         }
     }
