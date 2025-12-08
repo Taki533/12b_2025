@@ -10,7 +10,7 @@ namespace DigiKult_Erettsegi_2025
     {
         public int km;
         public string jelzes;
-        public bool Varosban;
+        public bool varosban;
         public ADATOK(string sor)
         {
             string[] s = sor.Split(" ");
@@ -24,29 +24,35 @@ namespace DigiKult_Erettsegi_2025
         }
         public bool Telepulese()
         {
-            return jelzes.Length >= 4;
+            if (jelzes.Length >= 4)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         public int sebessegHatar()
         {
             try
             {
-                int sebbeseg = int.Parse (jelzes);
-                return sebbeseg;
+                int sebesseg = int.Parse(this.jelzes);
+                return sebesseg;
             }
-            catch (Exception e)
+            catch
             {
-                if (Telepulese()) 
+                if (Telepulese())
                 {
                     return 50;
-                    
                 }
-                else if( jelzes=="]")
+                else if (jelzes == "]")
                 {
                     return 90;
                 }
                 else if (jelzes == "#")
                 {
-                    if (Varosban)
+                    if (varosban)
                     {
                         return 50;
                     }
@@ -54,10 +60,11 @@ namespace DigiKult_Erettsegi_2025
                     {
                         return 90;
                     }
-                        
+
                 }
                 else if (jelzes == "%")
-                    if (Varosban)
+                {
+                    if (varosban)
                     {
                         return 50;
                     }
@@ -65,6 +72,7 @@ namespace DigiKult_Erettsegi_2025
                     {
                         return 90;
                     }
+                }
                 else
                 {
                     return 0;

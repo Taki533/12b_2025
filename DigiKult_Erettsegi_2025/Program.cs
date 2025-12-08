@@ -11,16 +11,16 @@
             for (int i = 1; i < sorok.Length; i++)
             {
                 adatLista.Add(new ADATOK(sorok[i]));
-                adatLista[i - 1].Telepulese();
-            }
-
-            Console.WriteLine("2. feladat");
-            for (int i = 0; i < adatLista.Count; i++)
-            {
-                if (adatLista[i].Telepulese())
+                if (adatLista[i - 1].Telepulese())
                 {
-                    Console.WriteLine(adatLista[i].jelzes);
+                    varosban = true;
                 }
+                if (adatLista[i - 1].jelzes == "]")
+                {
+                    varosban = false;
+                }
+                adatLista[i-1].varosban = varosban;
+
             }
         }
     }
