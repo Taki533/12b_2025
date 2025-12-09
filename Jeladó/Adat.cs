@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Jeladó
 {
     internal class Adat
@@ -29,8 +28,13 @@ namespace Jeladó
         public Adat(string sor)
         {
             string[] vag = sor.Split(" ");
-            eltarol(int.Parse(vag[0]), int.Parse(vag[1]),int.Parse(vag[2]),int.Parse(vag[3]),int.Parse(vag[4]));
+            eltarol(int.Parse(vag[0]), int.Parse(vag[1]),int.Parse(vag[2]),int.Parse(vag[3]),int.Parse(vag[4]) );
             
+        }
+        public object kimaradt(Adat masik)
+        {   int dX = masik.x - this.x ;
+            int dY = Math.abs(masik.y - this.y) ;
+            if()
         }
     }
 }
