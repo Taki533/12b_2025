@@ -20,6 +20,7 @@
             Console.WriteLine(adatok.Where(x => x.melyseg==0).Count());
             double szazalek = (double)adatok.Where(x => x.melyseg==0).Count()/(double)adatok.Count();
             Console.WriteLine($"Az érintetlen terület aránya {szazalek:0.00%}");
+            
         }
     }
 }

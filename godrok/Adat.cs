@@ -17,5 +17,6 @@ namespace godrok
             this.melyseg = Melyseg;
             
         }
+
     }
 }
