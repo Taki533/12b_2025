@@ -20,6 +20,11 @@
             Console.WriteLine(adatok.Where(x => x.melyseg==0).Count());
             double szazalek = (double)adatok.Where(x => x.melyseg==0).Count()/(double)adatok.Count();
             Console.WriteLine($"Az érintetlen terület aránya {szazalek:0.00%}");
+            File.WriteAllLines("godrok.txt",string.Join("", adatok.Select(x=> x.melyseg))
+                .Split("0")
+                .Where(x=>x.Length>0));
+
+            
             
         }
     }
