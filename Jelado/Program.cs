@@ -37,6 +37,9 @@
             int maxY = adatok.Min(x => x.y);
 
             Console.WriteLine("Bal also: {0};{1}, JobbFelső: {2}; {3}", minX, minY, maxX,maxY);
+            Console.WriteLine("6. feladat");
+            var osszeg = adatok.Skip(1).Select((x,i) => x.tavolsag(adatok[i])).Sum();
+            Console.WriteLine($"Az elmozdulás {osszeg:0.000} egység");
 
 
         }

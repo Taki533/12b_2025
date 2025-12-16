@@ -54,6 +54,10 @@ namespace Jelado
 
 
         }
+        public double tavolsag(Adat masik)
+        {
+            return Math.Sqrt(Math.Pow((this.x - masik.x),2)+ Math.Pow((this.y-masik.y),2));
+        }
 
     }
 }

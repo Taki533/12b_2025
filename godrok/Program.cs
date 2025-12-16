@@ -6,16 +6,18 @@
         {
             string[] sorok = File.ReadAllLines("melyseg.txt");
             List<Melyseg> adatok = new List<Melyseg>();
-            sorok.ToList().ForEach(x =>
+            sorok.ToList().ForEach((x) =>
             {
-                adatok.Add(new Melyseg(int.Parse(x)));
+                adatok.Add(new Melyseg(int.Parse(x),adatok.Count + 1));
             });
             Console.WriteLine("1.Feladat");
             Console.WriteLine(adatok.Count);
+
             Console.WriteLine("2.feladat");
             Console.WriteLine("Adjon meg egy távolságértéket!");
             int tavolsagErtek = int.Parse(Console.ReadLine());
             Console.WriteLine($"Ezen a helyen a felszín {adatok[tavolsagErtek-1].melyseg} méter mélyen van.");
+
             Console.WriteLine("3.Feladat");
             Console.WriteLine(adatok.Where(x => x.melyseg==0).Count());
             double szazalek = (double)adatok.Where(x => x.melyseg==0).Count()/(double)adatok.Count();
@@ -23,6 +25,27 @@
             File.WriteAllLines("godrok.txt",string.Join("", adatok.Select(x=> x.melyseg))
                 .Split("0")
                 .Where(x=>x.Length>0));
+
+            Console.WriteLine("5. feladat");
+            List<Godor> godrok = new List<Godor>();
+
+            adatok.ForEach(x =>
+            {
+                if (x.melyseg > 0)
+                {
+                    godrok.Last().Add(x);
+                }
+                else
+                {
+
+                    if (godrok.Last().melysegek.Count>0)
+                    {
+                        godrok.Add(new Godor());
+                    }
+                        
+                }
+            });
+            godrok.Remove(godrok.Last());
 
             
             

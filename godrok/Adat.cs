@@ -12,9 +12,10 @@ namespace godrok
         public int Meter;
         
         
-        public Melyseg(int Melyseg)
+        public Melyseg(int Melyseg, int Meter)
         {
             this.melyseg = Melyseg;
+            this.Meter = Meter;
             
         }
 
