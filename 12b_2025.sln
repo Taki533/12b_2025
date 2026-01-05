@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jelado", "Jelado\Jelado.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "godrok", "godrok\godrok.csproj", "{ED3EE90B-E81E-4E33-BEC4-2ED61E30EF36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LatinTancok", "LatinTancok\LatinTancok.csproj", "{B67BF579-8ADA-4CA7-9479-19A213C1AE9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{ED3EE90B-E81E-4E33-BEC4-2ED61E30EF36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED3EE90B-E81E-4E33-BEC4-2ED61E30EF36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED3EE90B-E81E-4E33-BEC4-2ED61E30EF36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B67BF579-8ADA-4CA7-9479-19A213C1AE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67BF579-8ADA-4CA7-9479-19A213C1AE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67BF579-8ADA-4CA7-9479-19A213C1AE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67BF579-8ADA-4CA7-9479-19A213C1AE9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
