@@ -28,7 +28,7 @@
 
             Console.WriteLine("5. feladat");
             List<Godor> godrok = new List<Godor>();
-
+            godrok.Add(new Godor());
             adatok.ForEach(x =>
             {
                 if (x.melyseg > 0)
@@ -47,6 +47,20 @@
             });
             godrok.Remove(godrok.Last());
 
+            Console.WriteLine("6.feladat");
+
+            var talaltGodor = godrok.Where(egyGodor => egyGodor.Contains(tavolsagErtek)).ToList();
+            if (talaltGodor.Count > 0)
+            {
+                Console.WriteLine("Van gödör");
+            }
+            else 
+            {
+                Console.WriteLine("Ezen a helyen nincs gödör");
+            }
+            Console.WriteLine($"a) \r\n A gödör kezdete: {talaltGodor.First().GetFirst().Meter} méteren A gödör vége {talaltGodor.Last().GetLast().Meter} méteren");
+
+            
             
             
         }
