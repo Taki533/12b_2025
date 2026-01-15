@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "godrok", "godrok\godrok.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LatinTancok", "LatinTancok\LatinTancok.csproj", "{B67BF579-8ADA-4CA7-9479-19A213C1AE9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "operatorOverride", "operatorOverride\operatorOverride.csproj", "{F68D58FB-B457-48E8-8DFA-0C055C4ACFEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sipalya", "sipalya\sipalya.csproj", "{63E3B9F1-B8B9-4CCA-B52E-D1FFADA600C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{B67BF579-8ADA-4CA7-9479-19A213C1AE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B67BF579-8ADA-4CA7-9479-19A213C1AE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B67BF579-8ADA-4CA7-9479-19A213C1AE9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F68D58FB-B457-48E8-8DFA-0C055C4ACFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68D58FB-B457-48E8-8DFA-0C055C4ACFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68D58FB-B457-48E8-8DFA-0C055C4ACFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68D58FB-B457-48E8-8DFA-0C055C4ACFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63E3B9F1-B8B9-4CCA-B52E-D1FFADA600C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63E3B9F1-B8B9-4CCA-B52E-D1FFADA600C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63E3B9F1-B8B9-4CCA-B52E-D1FFADA600C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63E3B9F1-B8B9-4CCA-B52E-D1FFADA600C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
