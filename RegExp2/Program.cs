@@ -7,9 +7,12 @@ namespace RegExp2
         {
             string szoveg = File.ReadAllText("blabla.txt");
             Console.WriteLine(szoveg);
-            Regex reg = new Regex("^[A-Z]+\b");
+            Regex reg = new Regex(@"[^\s][A-Z-ÖÜÓŐÚÉÁŰÍ]{2,}\b\s[A-Z-ÖÜÓŐÚÉÁŰÍ]{2,}\b|[A-Z-ÖÜÓŐÚÉÁŰÍ]{2,}\b");
             MatchCollection match = reg.Matches(szoveg);
-            Console.WriteLine(match.Count);
+            foreach (Match m in match)
+            {
+                Console.WriteLine(m);
+            }
         }
     }
 }
