@@ -31,7 +31,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sipalya", "sipalya\sipalya.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoOrdinataRendszer", "KoOrdinataRendszer\KoOrdinataRendszer.csproj", "{FA575A3A-D693-4457-927E-E4F2FAC0305A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gyak_Wpf_1", "Gyak_Wpf_1\Gyak_Wpf_1.csproj", "{9E516D2A-71ED-4909-9768-303A01044CE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gyakorlas_operatorok", "Gyakorlas_operatorok\Gyakorlas_operatorok.csproj", "{D177C34F-F521-4D3A-8EFA-E79576EF6ECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegExp2", "RegExp2\RegExp2.csproj", "{9AE076F2-85B5-44E6-B7BC-FBCCC95BE5AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,10 +97,6 @@ Global
 		{FA575A3A-D693-4457-927E-E4F2FAC0305A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA575A3A-D693-4457-927E-E4F2FAC0305A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA575A3A-D693-4457-927E-E4F2FAC0305A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E516D2A-71ED-4909-9768-303A01044CE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E516D2A-71ED-4909-9768-303A01044CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E516D2A-71ED-4909-9768-303A01044CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E516D2A-71ED-4909-9768-303A01044CE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
