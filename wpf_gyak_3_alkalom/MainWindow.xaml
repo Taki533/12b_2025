@@ -1,0 +1,41 @@
+﻿<Window x:Class="wpf_gyak_3_alkalom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_gyak_3_alkalom"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Számok">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="39*"/>
+                        <ColumnDefinition Width="358*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="szam1" HorizontalAlignment="Left" Margin="53,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.524,0.743" Grid.Column="1" Height="18" TextChanged="TextBox_TextChanged" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="szam2" HorizontalAlignment="Left" Margin="53,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="57" Grid.Column="1" Height="18" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="szam3" HorizontalAlignment="Left" Margin="53,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.524,0.743" Grid.Column="1" Height="18" Grid.ColumnSpan="2"/>
+                    <Label Content="Szám1:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="1,6,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Szám2:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,58,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Szám3:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="1,108,0,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="eredmeny" HorizontalAlignment="Left" Margin="171,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="76" Width="111" Grid.Column="2"/>
+                    <Button Content="számolás" HorizontalAlignment="Left" Margin="60,61,0,0" VerticalAlignment="Top" Click="Button_Click" Grid.Column="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Szöveg">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="szoveg" HorizontalAlignment="Left" Margin="171,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204" TextChanged="TextBox_TextChanged_1"/>
+                    <Slider x:Name="honnan" HorizontalAlignment="Left" Margin="213,23,0,0" VerticalAlignment="Top" Width="120" ValueChanged="honnan_ValueChanged"/>
+                    <Slider x:Name="hova" HorizontalAlignment="Left" Margin="213,59,0,0" VerticalAlignment="Top" Width="120" ValueChanged="hova_ValueChanged"/>
+                    <Label Content="honann" HorizontalAlignment="Left" Margin="155,19,0,0" VerticalAlignment="Top"/>
+                    <Label Content="hova" HorizontalAlignment="Left" Margin="170,51,0,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="eredmeny2" HorizontalAlignment="Left" Margin="173,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="70" Width="224"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
