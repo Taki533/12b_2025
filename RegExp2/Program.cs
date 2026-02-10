@@ -48,13 +48,22 @@ namespace RegExp2
             {
                 Console.WriteLine(m);
             }
-            Regex reg7 = new Regex(@"ELSŐ ŐR[A-ZÖÜÓŐÚÉÁŰÍ]+", RegexOptions.IgnoreCase);
+            Regex reg7 = new Regex(@"ELSŐ ŐR\s+([^\s.,!?]+)\s+([^\s.,!?]+)\s", RegexOptions.IgnoreCase);
             MatchCollection match7 = reg7.Matches(szoveg);
             Console.WriteLine(match7.Count);
-            foreach (Match m in match7)
+            foreach (var m in match7)
             {
                 Console.WriteLine(m);
             }
+            Regex reg8 = new Regex(@"ELSŐ ŐR\s+(?<elso>[^\s.,!?]+)\s+([^\s.,!?]+)\s", RegexOptions.IgnoreCase);
+            MatchCollection match8 = reg8.Matches(szoveg);
+            Console.WriteLine(match8.Count);
+            foreach (var m in match8)
+            {
+                Console.WriteLine(m);
+            }
+            Console.WriteLine(reg8.Match(szoveg));
+
         }
     }
 }
