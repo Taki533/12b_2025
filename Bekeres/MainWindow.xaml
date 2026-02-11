@@ -1,0 +1,15 @@
+﻿<Window x:Class="Bekeres.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bekeres"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="Grid">
+        <TextBox x:Name="szöveg" HorizontalAlignment="Left" Margin="109,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="szöveg" HorizontalAlignment="Left" Margin="53,37,0,0" VerticalAlignment="Top"/>
+        <Button Content="Beküldés" HorizontalAlignment="Left" Margin="262,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.473,0.14" Click="Button_Click"/>
+
+    </Grid>
+</Window>
