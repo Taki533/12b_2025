@@ -1,0 +1,84 @@
+﻿<Window x:Class="LatinWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LatinWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#F0F2F5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="White" Padding="20">
+
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="5" BlurRadius="10" Opacity="0.3" Color="Gray"/>
+            </Border.Effect>
+
+            <StackPanel>
+                <TextBlock Text="Latin Táncok" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" Foreground="#333"/>
+
+                <TextBlock Text="Válassz lányt:" FontWeight="SemiBold" Margin="0,10,0,5" Foreground="#555"/>
+                <ComboBox x:Name="cbLanyok" SelectionChanged="UpdateEredmenyek" Padding="5" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Válassz táncot:" FontWeight="SemiBold" Margin="0,10,0,5" Foreground="#555"/>
+                <ComboBox x:Name="cbTancok" SelectionChanged="UpdateEredmenyek" Padding="5"/>
+                <TextBlock TextWrapping="Wrap" Text="Válassz egy feladatatot" FontWeight="SemiBold" Foreground="#555"/>
+                <ComboBox x:Name="feladatok" Width="261" SelectedIndex="0">
+                    <ComboBoxItem Content="2. Feladat: Első és Utolsó tánc"/>
+                    <ComboBoxItem/>
+                    <ComboBoxItem Content="3. Feladat: Samba előadások száma"/>
+                    <ComboBoxItem Content="5. Feladat: A kiválasztott pár keresése"/>
+                    <ComboBoxItem Content="6. Feladat: Fiúk listája"/>
+                </ComboBox>
+
+                <TextBlock Text="Információ:" FontWeight="Bold" Margin="0,20,0,5" Foreground="#333"/>
+                <TextBlock x:Name="txtStatus" Text="Fájl betöltése..." TextWrapping="Wrap" Foreground="Gray" FontStyle="Italic"/>
+            </StackPanel>
+        </Border>
+
+        <ScrollViewer Grid.Column="1" Padding="30">
+            <StackPanel>
+
+                <Border Background="White" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+                    <StackPanel>
+                        <TextBlock Text="2. Feladat: Első és Utolsó tánc" FontWeight="Bold" Foreground="#007ACC" Margin="0,0,0,5"/>
+                        <TextBlock x:Name="lblElsoUtolso" Text="-" FontSize="14"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="White" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+                    <StackPanel>
+                        <TextBlock Text="3. Feladat: Samba előadások száma" FontWeight="Bold" Foreground="#007ACC" Margin="0,0,0,5"/>
+                        <TextBlock x:Name="lblSambaCount" Text="-" FontSize="14"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="White" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+                    <StackPanel>
+                        <TextBlock Text="4. Feladat: A kiválasztott lány táncai" FontWeight="Bold" Foreground="#007ACC" Margin="0,0,0,5"/>
+                        <TextBlock x:Name="lblLanyTancai" Text="Válassz egy lányt a listából!" FontSize="14" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="White" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+                    <StackPanel>
+                        <TextBlock Text="5. Feladat: A kiválasztott pár keresése" FontWeight="Bold" Foreground="#007ACC" Margin="0,0,0,5"/>
+                        <TextBlock x:Name="lblKeresettPar" Text="Válassz lányt és táncot!" FontSize="16" FontWeight="SemiBold" Foreground="#D9534F"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="White" CornerRadius="8" Padding="15">
+                    <StackPanel>
+                        <TextBlock Text="6. Feladat: Fiúk listája" FontWeight="Bold" Foreground="#007ACC" Margin="0,0,0,5"/>
+                        <TextBlock x:Name="lblFiukListaja" Text="-" FontSize="13" TextWrapping="Wrap" Foreground="Gray"/>
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
