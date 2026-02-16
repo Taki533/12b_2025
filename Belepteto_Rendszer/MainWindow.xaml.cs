@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Belepteto_Rendszer
 {
@@ -19,6 +20,17 @@ namespace Belepteto_Rendszer
         public MainWindow()
         {
             InitializeComponent();
+            betoltes();
+        }
+        List<Adat> adatok = new List<Adat>();
+        void betoltes()
+        {
+            string[] sorok = File.ReadAllLines("bedat.txt");
+            
+            foreach (string sor in sorok)
+            {
+                adatok.Add(new Adat(sor));
+            }
         }
     }
 }
