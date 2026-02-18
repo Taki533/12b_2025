@@ -32,5 +32,24 @@ namespace Belepteto_Rendszer
                 adatok.Add(new Adat(sor));
             }
         }
+
+        private void elso_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Name == "elso")
+            {
+                dolgok.Text = adatok.First().ido;
+            }
+            else {
+                dolgok.Text = adatok.Last().ido;
+            }
+
+
+        }
+
+        private void utso_Checked(object sender, RoutedEventArgs e)
+        {
+           ;
+        }
     }
 }
