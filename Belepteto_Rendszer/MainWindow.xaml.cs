@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Belepteto_Rendszer
 {
@@ -19,6 +20,36 @@ namespace Belepteto_Rendszer
         public MainWindow()
         {
             InitializeComponent();
+            betoltes();
+        }
+        List<Adat> adatok = new List<Adat>();
+        void betoltes()
+        {
+            string[] sorok = File.ReadAllLines("bedat.txt");
+            
+            foreach (string sor in sorok)
+            {
+                adatok.Add(new Adat(sor));
+            }
+        }
+
+        private void elso_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Name == "elso")
+            {
+                dolgok.Text = adatok.First().ido;
+            }
+            else {
+                dolgok.Text = adatok.Last().ido;
+            }
+
+
+        }
+
+        private void utso_Checked(object sender, RoutedEventArgs e)
+        {
+           ;
         }
     }
 }

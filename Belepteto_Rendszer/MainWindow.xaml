@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-    
+        <StackPanel Margin="45,62,624,292">
+            <RadioButton x:Name="elso" Content="első belépés" IsChecked="False" GroupName="feladat2" Checked="elso_Checked"/>
+            <RadioButton x:Name="utso" Content="utsó kilépés" GroupName="feladat2" Checked="elso_Checked"/>
+        </StackPanel>
+        <Label Content="2.feladat" HorizontalAlignment="Left" Margin="21,39,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="dolgok" HorizontalAlignment="Left" Margin="181,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
