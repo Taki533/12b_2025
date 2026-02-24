@@ -22,16 +22,17 @@
                 <Grid Background="#FFE5E5E5" Margin="0,0,-1,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0*"/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="26*"/>
+                        <ColumnDefinition Width="769*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="_in" HorizontalAlignment="Left" Margin="63,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="18"/>
-                    <Label Content="innentől:" HorizontalAlignment="Left" Margin="0,26,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="56"/>
-                    <TextBox x:Name="oda" HorizontalAlignment="Left" Margin="63,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="18"/>
-                    <Label Content="idáig:" HorizontalAlignment="Left" Margin="0,57,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="39"/>
-                    <Label Content="Időpontok közti belépések" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="1,0,0,0" Height="26" Width="150"/>
-                    <Button x:Name="keres" Grid.Column="1" Content="Keresés" HorizontalAlignment="Left" Margin="0,93,0,0" VerticalAlignment="Top" Width="183" Height="20" Click="keres_Click"/>
-                    <Button x:Name="fajl" Grid.Column="1" Content="Fájlba mentés" HorizontalAlignment="Left" Margin="0,118,0,0" VerticalAlignment="Top" Width="183" Height="20"/>
-                    <ListView Grid.ColumnSpan="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="226,26,37,27">
+                    <TextBox x:Name="_in" HorizontalAlignment="Left" Margin="37,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="18"/>
+                    <Label Content="innentől:" HorizontalAlignment="Left" Margin="0,26,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="56" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="oda" HorizontalAlignment="Left" Margin="37,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="18"/>
+                    <Label Content="idáig:" HorizontalAlignment="Left" Margin="0,57,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="39" Grid.ColumnSpan="2"/>
+                    <Label Content="Időpontok közti belépések" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3" Margin="1,0,0,0" Height="26" Width="150"/>
+                    <Button x:Name="keres" Grid.Column="1" Content="Keresés" HorizontalAlignment="Left" Margin="0,93,0,0" VerticalAlignment="Top" Width="183" Height="20" Click="keres_Click" Grid.ColumnSpan="2"/>
+                    <Button x:Name="fajl" Grid.Column="1" Content="Fájlba mentés" HorizontalAlignment="Left" Margin="0,118,0,0" VerticalAlignment="Top" Width="183" Height="20" Grid.ColumnSpan="2"/>
+                    <ListView x:Name="lista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="200,26,37,27" Grid.Column="2">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn/>

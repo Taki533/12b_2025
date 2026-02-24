@@ -54,9 +54,10 @@ namespace Belepteto_Rendszer
 
         private void keres_Click(object sender, RoutedEventArgs e)
         {
+            bool isGood = true;
             string innen = _in.Text;
             string eddig = oda.Text;
-            Regex idominta = new Regex(@"^([01]\d|2\d):([0-5]\d)$");
+            Regex idominta = new Regex(@"^([01]?\d|2[0-3]):([0-5]\d)$");
             if (idominta.IsMatch(innen))
             {
                 _in.Foreground = Brushes.Black;
@@ -64,6 +65,7 @@ namespace Belepteto_Rendszer
             else {
                 _in.Foreground = Brushes.Red;
                 _in.Focus();
+                isGood = false;
             }
             if (idominta.IsMatch(eddig))
             {
@@ -72,8 +74,13 @@ namespace Belepteto_Rendszer
             else {
                 oda.Foreground = Brushes.Red;
                 oda.Focus();
+                isGood = false;
             }
-
+            var kesok = adatok.Where(x => x >= innen && x <= eddig).Select(x => x.ido + " " + x.kod);
+            if (kesok.Any())
+            {
+                lista.ItemsSource = kesok;
+            }
         }
 
 
