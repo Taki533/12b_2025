@@ -26,11 +26,12 @@ namespace Belepteto_Rendszer
         void betoltes()
         {
             string[] sorok = File.ReadAllLines("bedat.txt");
-            
             foreach (string sor in sorok)
             {
                 adatok.Add(new Adat(sor));
             }
         }
+
+
     }
 }
