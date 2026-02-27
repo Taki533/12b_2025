@@ -83,6 +83,12 @@ namespace Belepteto_Rendszer
             }
         }
 
-
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox elem = (ComboBox)sender;
+            var result = adatok.Where(x => x.esemenyKod == (elem.SelectedIndex+1));
+            valasztott.Text = result.Count().ToString()+" darab";
+            
+        }
     }
 }
