@@ -31,8 +31,8 @@
                     <Label Content="idáig:" HorizontalAlignment="Left" Margin="0,57,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="39" Grid.ColumnSpan="2"/>
                     <Label Content="Időpontok közti belépések" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3" Margin="1,0,0,0" Height="26" Width="150"/>
                     <Button x:Name="keres" Grid.Column="1" Content="Keresés" HorizontalAlignment="Left" Margin="0,93,0,0" VerticalAlignment="Top" Width="183" Height="20" Click="keres_Click" Grid.ColumnSpan="2"/>
-                    <Button x:Name="fajl" Grid.Column="1" Content="Fájlba mentés" HorizontalAlignment="Left" Margin="0,118,0,0" VerticalAlignment="Top" Width="183" Height="20" Grid.ColumnSpan="2"/>
-                    <ListView x:Name="lista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="200,26,37,27" Grid.Column="2">
+                    <Button x:Name="fajl" Grid.Column="1" Content="Fájlba mentés" HorizontalAlignment="Left" Margin="0,118,0,0" VerticalAlignment="Top" Width="183" Height="20" Grid.ColumnSpan="2" Click="fajl_Click"/>
+                    <ListView x:Name="lista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="200,26,37,42" Grid.Column="2">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn/>
@@ -42,6 +42,17 @@
 
                 </Grid>
             </TabItem>
+            <TabItem Header="4. feladat">
+                <Grid>
+                    <ComboBox Height="49" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="25,30,0,0" SelectedIndex="0">
+                        <ComboBoxItem Content="Belépések"/>
+                        <ComboBoxItem Content="Kilépések"/>
+                        <ComboBoxItem Content="Menzások"/>
+                        <ComboBoxItem Content="Kölcsönzések"/>
+                    </ComboBox>
+                </Grid>
+            </TabItem>
+
         </TabControl>
 
 

@@ -24,6 +24,15 @@ namespace Belepteto_Rendszer
             betoltes();
         }
         List<Adat> adatok = new List<Adat>();
+        enum kodok
+        {
+            
+            Belepes=1,
+            Kilepes =2,
+            Menza=3,
+            Konyvtar=4
+
+        }
         void betoltes()
         {
             string[] sorok = File.ReadAllLines("bedat.txt");
@@ -52,6 +61,7 @@ namespace Belepteto_Rendszer
             
         }
 
+        List<string> kesok = new List<string>();
         private void keres_Click(object sender, RoutedEventArgs e)
         {
             bool isGood = true;
@@ -76,13 +86,16 @@ namespace Belepteto_Rendszer
                 oda.Focus();
                 isGood = false;
             }
-            var kesok = adatok.Where(x => x >= innen && x <= eddig).Select(x => x.ido + " " + x.kod);
+            kesok = adatok.Where(x => x >= innen && x <= eddig).Select(x => x.ido + " " + x.kod).ToList();
             if (kesok.Any())
             {
                 lista.ItemsSource = kesok;
             }
         }
-
-
+        private void fajl_Click(object sender, RoutedEventArgs e)
+        {
+            File.WriteAllLines("kesok.txt", kesok);
+            MessageBox.Show("A kesok.txt Fájl Létrehozva.");
+        }
     }
 }
