@@ -61,6 +61,19 @@
                         <ColumnDefinition Width="35*"/>
                         <ColumnDefinition Width="759*"/>
                     </Grid.ColumnDefinitions>
+                    <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="312" Margin="254,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="153"/>
+                    <Label Grid.Column="1" Content="Dász Íz szkúl" HorizontalAlignment="Left" Margin="292,60,0,0" VerticalAlignment="Top"/>
+                    <Label Grid.Column="1" Content="Das ist nicht die Schule (oder előtte)" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="208"/>
+                    <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="263,152,361,64"/>
+                    <Label x:Name="szamlalo" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="299,98,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
+                    <Label x:Name="szamlalo2" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="83,155,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
+                    <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="47,203,578,13"/>
+                    <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="527,147,97,69"/>
+                    <Label x:Name="szamlalo3" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="563,101,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
+                    <Label Grid.Column="1" Content="Tschalók" HorizontalAlignment="Left" Margin="567,73,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="ora" Grid.Column="1" Content="07:00" HorizontalAlignment="Left" Margin="47,12,0,0" VerticalAlignment="Top" Height="49" Width="83" FontSize="28" FontWeight="Bold"/>
+                    <Button x:Name="Reset" Grid.Column="1" Content="Reset" HorizontalAlignment="Left" Margin="594,342,0,0" VerticalAlignment="Top" Height="51" Width="135" FontSize="28" FontWeight="Bold" Background="#FFC50000" Click="Reset_Click"/>
+                    <Button x:Name="id10t" Grid.Column="1" Content="id10t" HorizontalAlignment="Left" Margin="690,217,0,0" VerticalAlignment="Top" Height="25" Width="39" FontSize="11" FontWeight="Bold" Background="#4C0A6C79" Click="id10t_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>
