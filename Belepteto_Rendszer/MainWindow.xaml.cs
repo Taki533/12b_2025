@@ -97,5 +97,13 @@ namespace Belepteto_Rendszer
             File.WriteAllLines("kesok.txt", kesok);
             MessageBox.Show("A kesok.txt Fájl Létrehozva.");
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox elem = (ComboBox)sender;
+            var result = adatok.Where(x => x.esemenyKod == (elem.SelectedIndex+1));
+            valasztott.Text = result.Count().ToString()+" darab";
+            
+        }
     }
 }
