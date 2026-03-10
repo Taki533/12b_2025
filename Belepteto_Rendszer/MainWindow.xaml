@@ -55,14 +55,21 @@
                     <TextBlock x:Name="valasztott" HorizontalAlignment="Left" Margin="321,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
-            <TabItem HorizontalAlignment="Center" Height="20" Header="5.feladat" VerticalAlignment="Center" Width="54">
+            <TabItem HorizontalAlignment="Center" Height="20" Header="5. feladat" VerticalAlignment="Center" Width="54">
                 <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="35*"/>
-                        <ColumnDefinition Width="759*"/>
-                    </Grid.ColumnDefinitions>
+                    <Label Content="Melyikből volt több:" HorizontalAlignment="Left" Margin="25,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.171,0.117"/>
+                    <ComboBox x:Name="bal" HorizontalAlignment="Left" Margin="23,56,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="bal_SelectionChanged"/>
+                    <ComboBox x:Name="jobb" HorizontalAlignment="Left" Margin="238,56,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="bal_SelectionChanged"/>
+                    <Label x:Name="Relacio" Content="" HorizontalAlignment="Left" Margin="183,111,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="jobbLabel" Content="" HorizontalAlignment="Left" Margin="293,111,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="balLabel" Content="" HorizontalAlignment="Left" Margin="73,98,0,0" VerticalAlignment="Top"/>
+
+
+
                 </Grid>
             </TabItem>
+
+
         </TabControl>
 
 

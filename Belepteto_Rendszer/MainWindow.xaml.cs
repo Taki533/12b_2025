@@ -105,5 +105,35 @@ namespace Belepteto_Rendszer
             valasztott.Text = result.Count().ToString()+" darab";
             
         }
+
+        private void bal_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox elem = (ComboBox)sender;
+            int kivalasztva = elem.SelectedIndex+1;
+            var results = adatok.Where(x => x.esemenyKod == kivalasztva).Select(x => x.kod).Distinct().ToList();
+
+            if (elem.Name == "bal")
+            {
+                balLabel.Content = results.Count().ToString();
+            }
+            else
+            {
+                jobbLabel.Content = results.Count().ToString();
+            }
+            if (balLabel.Content != "" && jobbLabel.Content!="")
+            {
+                if(Convert.ToInt32(balLabel.Content)> Convert.ToInt32(jobbLabel.Content)){
+                    Relacio.Content = ">";
+                }
+                else if (Convert.ToInt32(balLabel.Content) < Convert.ToInt32(jobbLabel.Content))
+                {
+                    Relacio.Content = "<";
+                }
+                else
+                {
+                    Relacio.Content= "=";
+                }
+            }
+        }
     }
 }
