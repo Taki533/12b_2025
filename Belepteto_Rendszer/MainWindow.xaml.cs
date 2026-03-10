@@ -147,6 +147,7 @@ namespace Belepteto_Rendszer
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += suliBelepes;
+            timer.Start();
 
         }
         int aktualisido = 7 * 60 + 0;
@@ -156,6 +157,8 @@ namespace Belepteto_Rendszer
             var bement = adatok.Where(a => a <= aktualisido).ToList();
             bent.ItemsSource = bement;
             szamlalo.Content = bement.Count().ToString();
+
+            ora.Content = (aktualisido/60).ToString()+":"+(aktualisido%60).ToString();
             aktualisido += lepes;
             if (aktualisido > 19 * 60)
             {
