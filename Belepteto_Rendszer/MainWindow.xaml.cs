@@ -10,6 +10,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Windows.Threading;
 
 namespace Belepteto_Rendszer
 {
@@ -134,6 +135,24 @@ namespace Belepteto_Rendszer
                     Relacio.Content= "=";
                 }
             }
+        }
+
+        private void id10t_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("mávos bazsi megjelent");
+        }
+        DispatcherTimer timer;
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += suliBelepes;
+
+        }
+
+        void suliBelepes(object sender ,EventArgs e)
+        {
+
         }
     }
 }
