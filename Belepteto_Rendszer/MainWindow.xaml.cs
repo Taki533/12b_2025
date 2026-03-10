@@ -149,10 +149,18 @@ namespace Belepteto_Rendszer
             timer.Tick += suliBelepes;
 
         }
-
+        int aktualisido = 7 * 60 + 0;
+        int lepes = 10; //perc
         void suliBelepes(object sender ,EventArgs e)
         {
-
+            var bement = adatok.Where(a => a <= aktualisido).ToList();
+            bent.ItemsSource = bement;
+            szamlalo.Content = bement.Count().ToString();
+            aktualisido += lepes;
+            if (aktualisido > 19 * 60)
+            {
+                aktualisido = 7 * 60;
+            }
         }
     }
 }

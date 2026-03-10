@@ -87,7 +87,7 @@
                     <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="312" Margin="254,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="153"/>
                     <Label Grid.Column="1" Content="Dász Íz szkúl" HorizontalAlignment="Left" Margin="292,60,0,0" VerticalAlignment="Top"/>
                     <Label Grid.Column="1" Content="Das ist nicht die Schule (oder előtte)" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="208"/>
-                    <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="263,152,361,64"/>
+                    <ListBox x:Name="bent" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="263,152,361,64"/>
                     <Label x:Name="szamlalo" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="299,98,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
                     <Label x:Name="szamlalo2" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="83,155,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
                     <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="47,203,578,13"/>

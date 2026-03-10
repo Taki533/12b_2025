@@ -23,26 +23,32 @@ namespace Belepteto_Rendszer
             this.ido = adatok[1];
             this.esemenyKod = int.Parse(adatok[2]);
         }
-        static int perc(string ido) {
+        public static int perc(string ido) {
             return (int)TimeSpan.Parse(ido).TotalSeconds;
         }
-        public static bool operator <(Adat a, string ido) {
-            return perc(a.ido) < perc(ido);
+        public static bool operator <(Adat a, int ido)
+        {
+            return perc(a.ido) < ido;
         }
-        public static bool operator >(Adat a, string ido) {
-            return perc(a.ido) > perc(ido);
+        public static bool operator >(Adat a, int ido)
+        {
+            return perc(a.ido) > ido;
         }
-        public static bool operator <=(Adat a, string ido) {
-            return perc(a.ido) <= perc(ido);
+        public static bool operator <=(Adat a, int ido)
+        {
+            return perc(a.ido) <= ido;
         }
-        public static bool operator >=(Adat a, string ido) {
-            return perc(a.ido) >= perc(ido);
+        public static bool operator >=(Adat a, int ido)
+        {
+            return perc(a.ido) >= ido;
         }
-        public static bool operator ==(Adat a, string ido) {
-            return perc(a.ido) == perc(ido);
+        public static bool operator ==(Adat a, int ido)
+        {
+            return perc(a.ido) == ido;
         }
-        public static bool operator !=(Adat a, string ido) {
-            return perc(a.ido) != perc(ido);
+        public static bool operator !=(Adat a, int ido)
+        {
+            return perc(a.ido) != ido;
         }
     }
 }
