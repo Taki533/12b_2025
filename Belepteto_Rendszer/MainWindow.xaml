@@ -45,17 +45,40 @@
             </TabItem>
             <TabItem HorizontalAlignment="Center" Height="20" Header="4. feladat" VerticalAlignment="Center" Width="54">
                 <Grid Background="#FFE5E5E5">
-                    <ComboBox HorizontalAlignment="Left" Margin="146,16,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="46*"/>
+                        <ColumnDefinition Width="351*"/>
+                    </Grid.ColumnDefinitions>
+                    <ComboBox HorizontalAlignment="Left" Margin="54,16,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Grid.Column="1">
                         <ComboBoxItem Background="#7F65FF00" Content="Belepes"/>
                         <ComboBoxItem Background="#7FFF0F0F" Content="Kilepes"/>
                         <ComboBoxItem Background="#7FE6DF25" Content="Menza"/>
                         <ComboBoxItem Background="#7F4FBEED" Content="Konyvtar"/>
                     </ComboBox>
-                    <Label Content="Hányan csinálták ezt:" HorizontalAlignment="Left" Margin="25,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.171,0.117"/>
-                    <TextBlock x:Name="valasztott" HorizontalAlignment="Left" Margin="321,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                    <Label Content="Hányan csinálták ezt:" HorizontalAlignment="Left" Margin="25,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.171,0.117" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="valasztott" HorizontalAlignment="Left" Margin="229,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Column="1"/>
                 </Grid>
             </TabItem>
-            <TabItem HorizontalAlignment="Center" Height="20" Header="5. feladat" VerticalAlignment="Center" Width="54">
+            <TabItem HorizontalAlignment="Center" Height="20" Header="5.feladat" VerticalAlignment="Center" Width="54">
+                <Grid Background="#FFE5E5E5">
+                    <ComboBox x:Name="bal" HorizontalAlignment="Left" Margin="33,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="bal_SelectionChanged">
+                        <ComboBoxItem Background="#7F65FF00" Content="Belepes"/>
+                        <ComboBoxItem Background="#7FFF0F0F" Content="Kilepes"/>
+                        <ComboBoxItem Background="#7FE6DF25" Content="Menza"/>
+                        <ComboBoxItem Background="#7F4FBEED" Content="Konyvtar"/>
+                    </ComboBox>
+                    <ComboBox HorizontalAlignment="Left" Margin="449,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="bal_SelectionChanged">
+                        <ComboBoxItem Background="#7F65FF00" Content="Belepes"/>
+                        <ComboBoxItem Background="#7FFF0F0F" Content="Kilepes"/>
+                        <ComboBoxItem Background="#7FE6DF25" Content="Menza"/>
+                        <ComboBoxItem Background="#7F4FBEED" Content="Konyvtar"/>
+                    </ComboBox>
+                    <Label x:Name="balLabel" Content="" HorizontalAlignment="Left" Margin="61,111,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="jobbLabel" Content="" HorizontalAlignment="Left" Margin="490,111,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="Relacio" Content="" HorizontalAlignment="Left" Margin="286,119,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem HorizontalAlignment="Center" Height="20" Header="6. feladat" VerticalAlignment="Center" Width="54">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="35*"/>
@@ -76,8 +99,6 @@
                     <Button x:Name="id10t" Grid.Column="1" Content="id10t" HorizontalAlignment="Left" Margin="690,217,0,0" VerticalAlignment="Top" Height="25" Width="39" FontSize="11" FontWeight="Bold" Background="#4C0A6C79" Click="id10t_Click"/>
                 </Grid>
             </TabItem>
-
-
         </TabControl>
 
 
