@@ -61,21 +61,25 @@
             </TabItem>
             <TabItem HorizontalAlignment="Center" Height="20" Header="5.feladat" VerticalAlignment="Center" Width="54">
                 <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="36*"/>
+                    </Grid.ColumnDefinitions>
                     <ComboBox x:Name="bal" HorizontalAlignment="Left" Margin="33,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="bal_SelectionChanged">
                         <ComboBoxItem Background="#7F65FF00" Content="Belepes"/>
                         <ComboBoxItem Background="#7FFF0F0F" Content="Kilepes"/>
                         <ComboBoxItem Background="#7FE6DF25" Content="Menza"/>
                         <ComboBoxItem Background="#7F4FBEED" Content="Konyvtar"/>
                     </ComboBox>
-                    <ComboBox HorizontalAlignment="Left" Margin="449,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="bal_SelectionChanged">
+                    <ComboBox HorizontalAlignment="Left" Margin="194,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="bal_SelectionChanged" Grid.Column="1">
                         <ComboBoxItem Background="#7F65FF00" Content="Belepes"/>
                         <ComboBoxItem Background="#7FFF0F0F" Content="Kilepes"/>
                         <ComboBoxItem Background="#7FE6DF25" Content="Menza"/>
                         <ComboBoxItem Background="#7F4FBEED" Content="Konyvtar"/>
                     </ComboBox>
                     <Label x:Name="balLabel" Content="" HorizontalAlignment="Left" Margin="61,111,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="jobbLabel" Content="" HorizontalAlignment="Left" Margin="490,111,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="Relacio" Content="" HorizontalAlignment="Left" Margin="286,119,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="jobbLabel" Content="" HorizontalAlignment="Left" Margin="236,111,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label x:Name="Relacio" Content="" HorizontalAlignment="Left" Margin="32,119,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem HorizontalAlignment="Center" Height="20" Header="6. feladat" VerticalAlignment="Center" Width="54">
