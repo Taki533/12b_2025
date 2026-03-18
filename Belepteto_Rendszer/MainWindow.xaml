@@ -94,7 +94,7 @@
                     <ListBox x:Name="bent" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="263,152,361,64"/>
                     <Label x:Name="szamlalo" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="299,98,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
                     <Label x:Name="szamlalo2" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="83,155,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
-                    <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="47,203,578,13"/>
+                    <ListBox x:Name="kint" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="47,203,578,13"/>
                     <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="527,147,97,69"/>
                     <Label x:Name="szamlalo3" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="563,101,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
                     <Label Grid.Column="1" Content="Tschalók" HorizontalAlignment="Left" Margin="567,73,0,0" VerticalAlignment="Top"/>

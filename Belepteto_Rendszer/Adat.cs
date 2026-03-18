@@ -24,7 +24,7 @@ namespace Belepteto_Rendszer
             this.esemenyKod = int.Parse(adatok[2]);
         }
         static int perc(string ido) {
-            return (int)TimeSpan.Parse(ido).TotalSeconds;
+            return (int)TimeSpan.Parse(ido).TotalMinutes;
         }
         public static bool operator <(Adat a, int ido)
         {
@@ -73,6 +73,10 @@ namespace Belepteto_Rendszer
         public static bool operator !=(Adat a, string ido)
         {
             return perc(a.ido) != perc(ido);
+        }
+        public override string ToString()
+        {
+            return this.ido+": "+this.kod;
         }
     }
 }
