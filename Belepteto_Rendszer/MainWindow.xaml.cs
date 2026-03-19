@@ -154,7 +154,7 @@ namespace Belepteto_Rendszer
         int lepes = 10; //perc
         void suliBelepes(object sender ,EventArgs e)
         {
-            var bement = adatok.Where(a => a <= aktualisido).ToList();
+            var bement = adatok.Where(a => a <= aktualisido && a.esemenyKod ==1).ToList();
             
             
 
@@ -171,6 +171,18 @@ namespace Belepteto_Rendszer
 
             }
             bent.ItemsSource = ujlista;
+            var ujlistaKi = kiment.Except(bement).Select(x => x.kod +" "+x.ido).ToList();
+            ujlistaKi.Reverse();
+            try
+            {
+                ujlistaKi = ujlista.Slice(0, 10);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            szamlalo2.Content = (ujlistaKi.Count()).ToString();
+            kint.ItemsSource = ujlistaKi;
             ora.Content = (aktualisido/60).ToString()+":"+(aktualisido%60).ToString();
             aktualisido += lepes;
             if (aktualisido > 19 * 60)
