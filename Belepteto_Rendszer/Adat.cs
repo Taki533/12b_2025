@@ -74,5 +74,9 @@ namespace Belepteto_Rendszer
         {
             return perc(a.ido) != perc(ido);
         }
+        public override string ToString()
+        {
+            return this.ido+": "+this.kod;
+        }
     }
 }

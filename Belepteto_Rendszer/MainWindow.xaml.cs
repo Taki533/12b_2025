@@ -154,13 +154,23 @@ namespace Belepteto_Rendszer
         int lepes = 10; //perc
         void suliBelepes(object sender ,EventArgs e)
         {
-            var bement = adatok.Where(a => a <= aktualisido && a.esemenyKod ==1).ToList();
+            var bement = adatok.Where(a => a <= aktualisido && a.esemenyKod==1).ToList();
             
             
 
             var kiment = adatok.Where(a => a <= aktualisido && a.esemenyKod ==2).ToList();
             szamlalo.Content = (bement.Count()-kiment.Count()).ToString();
-            var ujlista = bement.Except(kiment).Select(x => x.kod +" "+x.ido).ToList();
+            //var ujlista = bement.Except(kiment).Select(x => x.kod +" "+x.ido).ToList();
+            List<Adat> ujlista = new List<Adat>();
+            foreach(Adat diak in bement)
+            {
+                var kimenesek = kiment.Where(e => e.kod == diak.kod && e>diak.ido).ToList();
+                if (kimenesek.Count() == 0)
+                {
+                    ujlista.Add(diak);
+                }
+
+            }
             ujlista.Reverse();
             try
             {
@@ -181,6 +191,30 @@ namespace Belepteto_Rendszer
             {
 
             }
+            szamlalo2.Content = (ujlistaKi.Count()).ToString();
+            kint.ItemsSource = ujlistaKi;
+            ora.Content = (aktualisido/60).ToString()+":"+(aktualisido%60).ToString();
+            aktualisido += lepes;
+            List<Adat> ujlistaKi = new List<Adat>();
+            foreach(Adat diak in kiment)
+            {
+                var bemenesek = bement.Where(e => e.kod == diak.kod && e > diak.ido);
+                //MessageBox.Show(string.Join(",", bemenesek));
+                if(bemenesek.Count() == 0)
+                {
+                    ujlistaKi.Add(diak);
+                }
+            }
+            ujlista.Reverse();
+            try
+            {
+                ujlistaKi = ujlistaKi.Slice(0, 10);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            MessageBox.Show(string.Join(",", ujlistaKi));
             szamlalo2.Content = (ujlistaKi.Count()).ToString();
             kint.ItemsSource = ujlistaKi;
             ora.Content = (aktualisido/60).ToString()+":"+(aktualisido%60).ToString();
