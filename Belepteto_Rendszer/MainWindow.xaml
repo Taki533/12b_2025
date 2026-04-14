@@ -1,0 +1,110 @@
+﻿<Window x:Class="Belepteto_Rendszer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Belepteto_Rendszer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="2.feladat">
+                <Grid Background="#FFE5E5E5">
+                    <StackPanel Margin="45,62,624,292">
+                        <RadioButton x:Name="elso" Content="első belépés" IsChecked="False" GroupName="feladat2" Checked="elso_Checked"/>
+                        <RadioButton x:Name="utso" Content="utsó kilépés" GroupName="feladat2" Checked="elso_Checked"/>
+                    </StackPanel>
+                    <Label Content="2.feladat" HorizontalAlignment="Left" Margin="21,39,0,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="dolgok" HorizontalAlignment="Left" Margin="181,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="3.feladat">
+                <Grid Background="#FFE5E5E5" Margin="0,0,-1,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="13*"/>
+                        <ColumnDefinition Width="129*"/>
+                        <ColumnDefinition Width="256*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="_in" HorizontalAlignment="Left" Margin="37,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="18"/>
+                    <Label Content="innentől:" HorizontalAlignment="Left" Margin="0,26,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="56" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="oda" HorizontalAlignment="Left" Margin="37,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="18"/>
+                    <Label Content="idáig:" HorizontalAlignment="Left" Margin="0,57,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="39" Grid.ColumnSpan="2"/>
+                    <Label Content="Időpontok közti belépések" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3" Margin="1,0,0,0" Height="26" Width="150"/>
+                    <Button x:Name="keres" Grid.Column="1" Content="Keresés" HorizontalAlignment="Left" Margin="0,93,0,0" VerticalAlignment="Top" Width="183" Height="20" Click="keres_Click" Grid.ColumnSpan="2"/>
+                    <Button x:Name="fajl" Grid.Column="1" Content="Fájlba mentés" HorizontalAlignment="Left" Margin="0,118,0,0" VerticalAlignment="Top" Width="183" Height="20" Grid.ColumnSpan="2"/>
+                    <ListView x:Name="lista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="200,26,37,27" Grid.Column="2" Grid.ColumnSpan="2">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                </Grid>
+            </TabItem>
+            <TabItem HorizontalAlignment="Center" Height="20" Header="4. feladat" VerticalAlignment="Center" Width="54">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="46*"/>
+                        <ColumnDefinition Width="351*"/>
+                    </Grid.ColumnDefinitions>
+                    <ComboBox HorizontalAlignment="Left" Margin="54,16,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Grid.Column="1">
+                        <ComboBoxItem Background="#7F65FF00" Content="Belepes"/>
+                        <ComboBoxItem Background="#7FFF0F0F" Content="Kilepes"/>
+                        <ComboBoxItem Background="#7FE6DF25" Content="Menza"/>
+                        <ComboBoxItem Background="#7F4FBEED" Content="Konyvtar"/>
+                    </ComboBox>
+                    <Label Content="Hányan csinálták ezt:" HorizontalAlignment="Left" Margin="25,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.171,0.117" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="valasztott" HorizontalAlignment="Left" Margin="229,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem HorizontalAlignment="Center" Height="20" Header="5.feladat" VerticalAlignment="Center" Width="54">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="36*"/>
+                    </Grid.ColumnDefinitions>
+                    <ComboBox x:Name="bal" HorizontalAlignment="Left" Margin="33,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="bal_SelectionChanged">
+                        <ComboBoxItem Background="#7F65FF00" Content="Belepes"/>
+                        <ComboBoxItem Background="#7FFF0F0F" Content="Kilepes"/>
+                        <ComboBoxItem Background="#7FE6DF25" Content="Menza"/>
+                        <ComboBoxItem Background="#7F4FBEED" Content="Konyvtar"/>
+                    </ComboBox>
+                    <ComboBox HorizontalAlignment="Left" Margin="194,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="bal_SelectionChanged" Grid.Column="1">
+                        <ComboBoxItem Background="#7F65FF00" Content="Belepes"/>
+                        <ComboBoxItem Background="#7FFF0F0F" Content="Kilepes"/>
+                        <ComboBoxItem Background="#7FE6DF25" Content="Menza"/>
+                        <ComboBoxItem Background="#7F4FBEED" Content="Konyvtar"/>
+                    </ComboBox>
+                    <Label x:Name="balLabel" Content="" HorizontalAlignment="Left" Margin="61,111,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="jobbLabel" Content="" HorizontalAlignment="Left" Margin="236,111,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label x:Name="Relacio" Content="" HorizontalAlignment="Left" Margin="32,119,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem HorizontalAlignment="Center" Height="20" Header="6. feladat" VerticalAlignment="Center" Width="54">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="759*"/>
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="312" Margin="254,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="153"/>
+                    <Label Grid.Column="1" Content="Dász Íz szkúl" HorizontalAlignment="Left" Margin="292,60,0,0" VerticalAlignment="Top"/>
+                    <Label Grid.Column="1" Content="Das ist nicht die Schule (oder előtte)" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="208"/>
+                    <ListBox x:Name="bent" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="263,152,361,64"/>
+                    <Label x:Name="szamlalo" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="299,98,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
+                    <Label x:Name="szamlalo2" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="83,155,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
+                    <ListBox x:Name="kint" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="47,203,578,13"/>
+                    <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="527,147,97,69"/>
+                    <Label x:Name="szamlalo3" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="563,101,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
+                    <Label Grid.Column="1" Content="Tschalók" HorizontalAlignment="Left" Margin="567,73,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="ora" Grid.Column="1" Content="07:00" HorizontalAlignment="Left" Margin="47,12,0,0" VerticalAlignment="Top" Height="49" Width="83" FontSize="28" FontWeight="Bold"/>
+                    <Button x:Name="Reset" Grid.Column="1" Content="Reset" HorizontalAlignment="Left" Margin="594,342,0,0" VerticalAlignment="Top" Height="51" Width="135" FontSize="28" FontWeight="Bold" Background="#FFC50000" Click="Reset_Click"/>
+                    <Button x:Name="id10t" Grid.Column="1" Content="id10t" HorizontalAlignment="Left" Margin="690,217,0,0" VerticalAlignment="Top" Height="25" Width="39" FontSize="11" FontWeight="Bold" Background="#4C0A6C79" Click="id10t_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+
+    </Grid>
+</Window>

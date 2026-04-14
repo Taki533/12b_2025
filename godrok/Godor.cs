@@ -23,10 +23,14 @@ namespace godrok
         }
         public bool Contains(int meter)
         {
-            return
+            return GetFirst().Meter <= meter && GetLast().Meter >= meter;
         }
-        public Melyseg GetFirst() {  return melysegek.First(); }
+        public Melyseg GetFirst() { return melysegek.First(); }
         public Melyseg GetLast() { return melysegek.Last(); }
 
+        public bool isMonotonous()
+        {
+            var eredmeny = melysegek.Skip(1).Select((melyseg, i) => { melyseg.Meter >= melysegek[i].Meter });
+        }
     }
 }
