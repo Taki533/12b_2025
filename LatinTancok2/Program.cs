@@ -28,7 +28,7 @@ namespace LatinTancok2
             Console.WriteLine("4.feladat");
             var Vilmak = tancok.Where(x => x.Lany == "Vilma").ToList();
             var VilmaTanc = Vilmak.Select(x => x.Tanc).ToList();
-            Console.WriteLine($"A táncok amiben Vilma szerepelt : {string.Join(',', VilmaTan)} ");
+            Console.WriteLine($"A táncok amiben Vilma szerepelt : {string.Join(',', VilmaTanc)} ");
 
             Console.WriteLine("5.feladat");
             Console.WriteLine("Adjon meg egy táncot: ");

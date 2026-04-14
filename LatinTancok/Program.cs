@@ -1,4 +1,4 @@
-﻿namespace LatinTancok
+﻿namespace TancIskola
 {
     internal class Program
     {
@@ -31,7 +31,7 @@
             }
             else
             {
-                Console.WriteLine($"A samba bemutatóján Vilma párja {vilmaParja[0].fiu}  volt.");
+                Console.WriteLine($"A {megadott} bemutatóján Vilma párja {vilmaParja[0].fiu}  volt.");
             }
 
             Console.WriteLine("6.feladat");
@@ -46,6 +46,13 @@
             Console.WriteLine("7. feladat");
             var fiuTancosok = adatok.GroupBy(tanc => tanc.fiu).Select(tancos=> new {nev = tancos.Key,elofordulas=tancos.Count()} ).OrderBy(tancos => tancos.elofordulas);
             var lanyTancosok = adatok.GroupBy(tanc => tanc.lany).Select(tancos=> new {nev = tancos.Key,elofordulas=tancos.Count()} ).OrderBy(tancos => tancos.elofordulas);
+            var maxFiu = fiuTancosok.Max(tancos => tancos.elofordulas);
+            var maxLany = lanyTancosok.Max(tancos => tancos.elofordulas);
+            Console.WriteLine(maxFiu);
+            var LegtobbszorSzerepeltFiuk = fiuTancosok.Where(tancos => tancos.elofordulas == maxFiu).ToList();
+            var LegtobbszorSzerepeltLanyok = lanyTancosok.Where(tancos => tancos.elofordulas == maxLany).ToList();
+
+            Console.WriteLine($"legtöbbször szerepelt fiúk: {string.Join(',', LegtobbszorSzerepeltFiuk.Select(fiu => fiu.nev).ToList()) } \n A legtöbbször előforduló lány táncosok: {string.Join(',', LegtobbszorSzerepeltLanyok.Select(lany => lany.nev).ToList())}");
             
         }
     }
