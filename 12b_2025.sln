@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ujablakopening", "ujablakop
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fuvar", "Fuvar\Fuvar.csproj", "{D3CC51D2-9B52-43C3-92A1-0989103A4466}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NyelvVizsga", "NyelvVizsga\NyelvVizsga.csproj", "{DA6B3727-EF9D-4B04-A2A7-C11C628A5DBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{D3CC51D2-9B52-43C3-92A1-0989103A4466}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3CC51D2-9B52-43C3-92A1-0989103A4466}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3CC51D2-9B52-43C3-92A1-0989103A4466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA6B3727-EF9D-4B04-A2A7-C11C628A5DBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA6B3727-EF9D-4B04-A2A7-C11C628A5DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA6B3727-EF9D-4B04-A2A7-C11C628A5DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA6B3727-EF9D-4B04-A2A7-C11C628A5DBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
